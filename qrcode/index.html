@@ -19,7 +19,7 @@
             <div><video id="camera-preview"></video></div>
         </div>
 
-        <div class="container div-qr-focus">
+        <!-- <div class="container div-qr-focus">
             <div id="qr-shaded-region">
                 <div class="focus-box-piece" style="width: 40px; height: 5px; top: -5px; left: 0px;"></div>
                 <div class="focus-box-piece" style="width: 40px; height: 5px; top: -5px; right: 0px;"></div>
@@ -30,7 +30,7 @@
                 <div class="focus-box-piece" style="width: 5px; height: 45px; top: -5px; right: -5px;"></div>
                 <div class="focus-box-piece" style="width: 5px; height: 45px; top: 215px; right: -5px;"></div>
             </div>
-        </div>
+        </div> -->
 
         <div class="container div-qr-code-1">
             <img id="img-focus" src="./qrcode-johndoe.png"></img>
@@ -38,6 +38,7 @@
         </div>
 
         <div><spin id="camera-list">Camera List</spin></div>
+        <div><spin id="user-agent">UserAgent</spin></div>
 
         <!-- <div id="container" class="div-button">
             <button type="button" class="btn btn-primary scan-button" onclick="onStartScanning()">Start Scanning</button>
@@ -99,15 +100,19 @@
         <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
 
         <script type="text/javascript">
+
+            $('#user-agent').text("UserAgent=" + window.navigator.userAgent);
+            var isMobile = /mobile|android|iphone|ipad/.test(window.navigator.userAgent.toLowerCase());
+            
+            var scanner;
+            startCamera();
+
             function onStartScanning() {
                 $("#messageBox").modal("show");
                 //startCamera();                
                 //alert("Start scanning...");
             }
-
-            var scanner;
-            startCamera();
-
+            
             function startCamera() {
                 scanner = new Instascan.Scanner({ video: document.getElementById('camera-preview'), scanPeriod: 5, mirror: false });
                 scanner.addListener('scan', function (content) {
@@ -146,7 +151,13 @@
                             });
                             $('#camera-list').text(list);
 
-                            scanner.start(cameras[0]);
+                            if(cameras.length === 1) {
+                                scanner.start(cameras[0]);
+                            }
+                            else {
+                                scanner.start(isMobile ? cameras[1] : cameras[0]);
+                            }
+                                        
                             $('[name="options"]').on('change', function () {
                                 if ($(this).val() == 1) {
                                     if (cameras[0] != "") {
