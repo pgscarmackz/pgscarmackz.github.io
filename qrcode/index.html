@@ -32,6 +32,10 @@
             </div>
         </div> -->
 
+        <div id="container" class="div-button">
+            <button type="button" id="start-stop-button" class="btn btn-primary scan-button" onclick="onStartScanning()">Start Scanning</button>
+        </div>
+
         <div class="container div-qr-code-1">
             <img id="img-focus" src="./qrcode-johndoe.png"></img>
             <p><b>Scan this QR code to redeem</b></p>
@@ -105,11 +109,13 @@
             var isMobile = /mobile|android|iphone|ipad/.test(window.navigator.userAgent.toLowerCase());
             
             var scanner;
-            startCamera();
+            // startCamera();
 
             function onStartScanning() {
-                $("#messageBox").modal("show");
-                //startCamera();                
+                // $("#messageBox").modal("show");
+                startCamera();
+
+                $('#start-stop-button').hide();
                 //alert("Start scanning...");
             }
             
