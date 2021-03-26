@@ -1,0 +1,91 @@
+
+body {
+    background-color: lightblue;
+}
+
+.div-img {
+    width: 100%;
+    height: 420;
+    background-color: chartreuse;
+    margin-top: -300px;
+    z-index: 1200;
+}
+
+.div-camera {
+    width: 100%;
+    height: 220;
+    text-align: center;
+    background-color: lightblue;
+    z-index: 100;
+}
+
+.div-button {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    background-color: cadetblue;
+}
+
+.scan-button {
+    margin-top: 20px;    
+}
+
+#img-focus {
+    margin-left: 0px;
+    margin-top: 20px;
+    width: 500px;
+    height: 313px;
+    background-color: aquamarine;
+}
+
+#start-button {
+    margin-left: 50px;
+    margin-top: 30px;    
+}
+
+#camera-preview {
+    height: 400px;
+    margin: 5px auto;
+}
+
+.div-qr-focus {
+    width: 900;
+    height: 100;
+    margin-top: -345px;
+    text-align: center;
+    background-color: lightblue;
+    z-index: 100;
+}
+
+#qr-shaded-region {
+    position: relative;
+    margin: auto;
+    width: 400px;
+    height: 263px;
+    /* border-width: 115px 195px; */
+    /* border-style: solid;
+    border-color: rgba(0, 0, 0, 0.48);
+    box-sizing: border-box; */
+    /* inset: 0px; */
+    align-items: center;
+}
+
+.div-qr-code-1 {
+    width: 171;
+    height: 169;
+    margin-top: 60px;
+    text-align: center;
+    background-color: lightblue;
+    z-index: 100;
+}
+
+#img-focus {
+    width: 171px;
+    height: 169px;
+    margin-top: 100px;
+}
+
+.focus-box-piece {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+}
