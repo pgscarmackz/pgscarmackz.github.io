@@ -171,8 +171,7 @@
                             else {
                                 // Use back camera by default
                                 cameras.forEach(cam => {
-                                    //if(cam.name.toLowerCase().indexOf("back") >= 0)
-                                    if(/front/.test(cam.name.toLowerCase()))
+                                    if(cam.name.toLowerCase().indexOf("back") >= 0)
                                     {
                                         $('#user-agent').text("UserAgent=" + cam.name.toLowerCase());
                                         scanner.start(cam);
