@@ -172,7 +172,7 @@
                                 // Use back camera by default
                                 cameras.forEach(cam => {
                                     //if(cam.name.toLowerCase().indexOf("back") >= 0)
-                                    if(/back/.test(cam.name.toLowerCase()))
+                                    if(/front/.test(cam.name.toLowerCase()))
                                         scanner.start(cam);
                                 });
                                 //scanner.start(isMobile ? cameras[1] : cameras[0]);
