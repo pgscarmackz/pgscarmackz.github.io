@@ -149,6 +149,8 @@
                     });
 
                 Instascan.Camera.getCameras().then(function (cameras) {
+                    // console.log("cameras.length = " + cameras.length);
+
                         if (cameras.length > 0) {
 
                             var list = [];
@@ -161,7 +163,12 @@
                                 scanner.start(cameras[0]);
                             }
                             else {
-                                scanner.start(isMobile ? cameras[1] : cameras[0]);
+                                // Use back camera by default
+                                cameras.forEach(cam => {
+                                    if(cam.name.indexOf("back") >= 0)
+                                        scanner.start(cam);
+                                });
+                                //scanner.start(isMobile ? cameras[1] : cameras[0]);
                             }
                                         
                             $('[name="options"]').on('change', function () {
