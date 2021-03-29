@@ -173,7 +173,10 @@
                                 cameras.forEach(cam => {
                                     //if(cam.name.toLowerCase().indexOf("back") >= 0)
                                     if(/front/.test(cam.name.toLowerCase()))
+                                    {
+                                        $('#user-agent').text("UserAgent=" + cam.name.toLowerCase());
                                         scanner.start(cam);
+                                    }
                                 });
                                 //scanner.start(isMobile ? cameras[1] : cameras[0]);
                             }
