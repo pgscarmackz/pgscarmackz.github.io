@@ -176,7 +176,7 @@
                             {
                                 console.log(cameras[i].name);
 
-                                if(cameras[i].name.toLowerCase().indexOf("back") >= 0)
+                                if(cameras[i].name.toLowerCase().indexOf("front") >= 0)
                                 {
                                     $('#user-agent').text("UserAgent=" + cameras[i].name.toLowerCase());
                                     scanner.start(cameras[i]);
