@@ -178,7 +178,7 @@
                             {
                                 console.log(cameras[i].name);
 
-                                if(cameras[i].name.toLowerCase().indexOf("front") >= 0)
+                                if(cameras[i].name.toLowerCase().indexOf("back") >= 0)
                                 {
                                     $("#current-camera").text("Current Camera = " + cameras[i].name + " ("+ i + ")");
                                     scanner.start(cameras[i]);
