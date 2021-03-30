@@ -43,6 +43,7 @@
 
         <div><spin id="camera-list">Camera List</spin></div>
         <div><spin id="user-agent">UserAgent</spin></div>
+        <div><spin id="current-camera">Current Camera</spin></div>
 
         <!-- <div id="container" class="div-button">
             <button type="button" class="btn btn-primary scan-button" onclick="onStartScanning()">Start Scanning</button>
@@ -168,24 +169,22 @@
                         $('#camera-list').text(list);
 
                         if(cameras.length === 1) {
+                            $("#current-camera").text("Current Camera = " + cameras[0].name + " (0)");
                             scanner.start(cameras[0]);
                         }
                         else {
-                            scanner.start(cameras[1]);
                             // Use back camera by default
-                            /*
                             for(var i=0; i<cameras.length; i++)
                             {
                                 console.log(cameras[i].name);
 
                                 if(cameras[i].name.toLowerCase().indexOf("front") >= 0)
                                 {
-                                    $('#user-agent').text("UserAgent=" + cameras[i].name.toLowerCase());
+                                    $("#current-camera").text("Current Camera = " + cameras[i].name + " ("+ i + ")");
                                     scanner.start(cameras[i]);
                                     break;
                                 }
                             }
-                            */
                             /*
                             cameras.forEach(cam => {
                                 if(cam.name.toLowerCase().indexOf("back") >= 0) {
