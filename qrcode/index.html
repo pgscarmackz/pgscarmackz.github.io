@@ -127,7 +127,12 @@
             }
             
             function startCamera() {
-                scanner = new Instascan.Scanner({ video: document.getElementById('camera-preview'), scanPeriod: 5, mirror: false });
+                scanner = new Instascan.Scanner({
+                    video: document.getElementById('camera-preview'),
+                    scanPeriod: 5,
+                    mirror: false,
+                    facingMode: { exact: "environment" }
+                });
                 scanner.addListener('scan', function (content) {
                         // {"name":"John Doe","code":"ADE34ADFHMYLL59URYPQOS20BV","amount":1000}
 
