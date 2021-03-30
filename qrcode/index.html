@@ -171,7 +171,9 @@
                             scanner.start(cameras[0]);
                         }
                         else {
+                            scanner.start(cameras[0]);
                             // Use back camera by default
+                            /*
                             for(var i=0; i<cameras.length; i++)
                             {
                                 console.log(cameras[i].name);
@@ -183,6 +185,7 @@
                                     break;
                                 }
                             }
+                            */
                             /*
                             cameras.forEach(cam => {
                                 if(cam.name.toLowerCase().indexOf("back") >= 0) {
