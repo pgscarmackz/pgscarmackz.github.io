@@ -45,6 +45,22 @@ class LoginForm extends React.Component {
             "password": p
         };
 
+        if(u === "johnd" && p === "pong!") {
+            var data = {
+                "token": "3FB33306-6437-4FBA-9BF2-65595995F69C",
+                "firstName": "John",
+                "lastName": "Doe"
+            };
+            sessionStorage.setItem("token", data.token);
+            sessionStorage.setItem("firstName", data.firstName);
+            sessionStorage.setItem("lastName", data.lastName);
+
+            location.href = "./main.html";
+        }
+        else {
+            alert("Username or password is wrong !");
+        }
+
         /*
         nm.sendRequest(
             nm.Mode.Post,
@@ -83,7 +99,7 @@ class LoginForm extends React.Component {
         */
 
         // Clear the state
-        this.setState({ username: "", password: "" });
+        this.setState({ username: this.state.username, password: "" });
     }
 
     render() {
