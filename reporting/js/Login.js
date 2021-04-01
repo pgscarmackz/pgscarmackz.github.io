@@ -45,6 +45,7 @@ class LoginForm extends React.Component {
             "password": p
         };
 
+        /*
         nm.sendRequest(
             nm.Mode.Post,
             nm.ApiUrL.Login,
@@ -57,7 +58,7 @@ class LoginForm extends React.Component {
                     sessionStorage.setItem("firstName", response.data.firstName);
                     sessionStorage.setItem("lastName", response.data.lastName);
 
-                    location.href = "/Home/Summary";
+                    location.href = "./main/html";
                 }
                 else
                 {
@@ -79,6 +80,7 @@ class LoginForm extends React.Component {
             }
         };
         xhr.send(JSON.stringify(loginData));
+        */
 
         // Clear the state
         this.setState({ username: "", password: "" });

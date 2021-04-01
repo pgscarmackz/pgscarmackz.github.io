@@ -1,0 +1,511 @@
+body, canvas, div {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    font-family: Arial;
+    background: url(../img/background.jpg) 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100%;
+}
+
+input:-webkit-autofill::first-line, input:-webkit-autofill:focus {
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 30px;
+    line-height: 1.3em;
+    color: white;
+}
+
+label, p, a {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+p {
+    font-size: 0.75em;
+}
+
+a:visited {
+    color: white;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+input:-webkit-autofill {
+    -webkit-transition-delay: 9999s;
+    transition-delay: 9999s;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: top;
+}
+
+input[type=checkbox]:checked+label::before, input[type=checkbox]:checked+label::after, input[type=checkbox]:not(:checked)+label::after {
+    font-weight: bolder;
+    font-size: 30px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    line-height: 32px;
+}
+
+input[type=checkbox]:checked+label::after, input[type=checkbox]:not(:checked)+label::after {
+    content: "Remember me";
+    font-size: 20px;
+    top: 0px;
+    left: 35px;
+    width: 160px;
+}
+
+input[type=checkbox]:checked+label::before {
+    content: "✓";
+    top: -4px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+    background-color: transparent;
+    transform: scale(1);
+}
+
+.logo {
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    padding-left: auto;
+    object-fit: contain;
+}
+
+.normal-font {
+    font-size: 20px;
+}
+
+.imgBtn {
+    width: 100%;
+    object-fit: contain;
+}
+
+.having_trouble {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.inputField {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white !important;
+    margin-bottom: 24px;
+    background: transparent !important;
+    border: 21px solid transparent;
+    height: 21px !important;
+    max-height: 21px;
+    width: 80%;
+    padding: 3px 0px 10px 0px;
+    -webkit-border-image: url(../img/text_field_slice.png) 21 fill;
+    -o-border-image: url(../img/text_field_slice.png) 21 fill;
+    border-image: url(../img/text_field_slice.png) 21 fill;
+}
+
+.errorBtn {
+    text-decoration: underline;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 200%;
+    color: white;
+    background-color: Transparent;
+    border: none;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: 678px;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.btn-norm {
+    margin: 5px auto;
+    outline: thick;
+    position: relative;
+    background: linear-gradient(to top, #26caeb 0%, #06a0cf 20%, #0d8fbb 35%, #3db4d1 50%, #86dcf0 75%, #3be4f3 100%);
+    background-clip: padding-box;
+    padding: 10px 40px 10px 40px;
+    transition: 0.5s;
+    border: #09212fEE 2px solid;
+    border-radius: 10px;
+    font-family: Arial;
+    font-weight: bolder;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: white;
+    -webkit-box-shadow: inset 0 -2px 5px #ffffffc4;
+    -moz-box-shadow: inset 0 -2px 5px #ffffffc4;
+    box-shadow: inset 0 -2px 5px #ffffffc4;
+    text-shadow: -1px -1px 1.5px #1c4455, 2px -1px 1.5px #1c4455, -1px 2px 1.5px #1c4455, 2px 2px 1.5px #1c4455, -1px 0px 1.5px #1c4455, 2px 0px 1.5px #1c4455, 0px 2px 1.5px #1c4455, 0px -1px 1.5px #1c4455;
+}
+
+.btn-norm:hover {
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px 25px 12px #ffffffc4;
+    -moz-box-shadow: inset 0 -2px 25px 12px #ffffffc4;
+    box-shadow: inset 0 -2px 25px 12px #ffffffc4;
+}
+
+.btn-norm:before {
+    content: attr(title);
+    color: rgba(255, 255, 255, .1);
+    position: absolute;
+}
+
+.btn-norm::after {
+    position: absolute;
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    background: linear-gradient(#002633, #0081b4);
+    content: '';
+    z-index: -1;
+    border-radius: 12px;
+}
+
+.preloader {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 10px;
+}
+
+.preloader-row {
+    bottom: 80px;
+    width: 100%;
+    position: fixed;
+}
+
+.preloader-content {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.0);
+}
+
+.preloader--img img {
+    width: 35px;
+    height: 35px;
+    animation: rotate 2s steps(8) infinite;
+}
+
+.preloader--text {
+    margin-left: 10px;
+    color: #fff;
+    font-size: 30px;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.error {
+    color: red !important;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.validator:before {
+    content: '';
+    position: absolute;
+    margin-top: -15px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #888888;
+}
+
+.validator {
+    position: absolute;
+    background: #888888;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -8px;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    z-index: 1;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.overlay {
+    position: fixed;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: none;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+    align-items: center;
+}
+
+.sideBySide {
+    width: 200px;
+    height: 55px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#remember_me_div {
+    position: absolute;
+    display: block;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+#rememberme {
+    display: none;
+}
+
+#btn-login {
+    display: block;
+}
+
+.btn-new {
+    margin-top: 20px;
+    padding: 18px 12px 12px;
+    border-radius: 16px;
+    max-width: 100%;
+}
+
+.btn-new::after {
+    border-radius: 18px;
+}
+
+.btn-accept {
+    margin-right: 10%;
+}
+
+.sysPanel {
+    border: 100px solid transparent;
+    max-width: 80%;
+    -webkit-border-image: url(../img/system_msg_panel_slice.png) 100 fill;
+    -o-border-image: url(../img/system_msg_panel_slice.png) 100 fill;
+    border-image: url(../img/system_msg_panel_slice.png) 100 fill;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+.errorMsg {
+    word-wrap: break-word;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 250%;
+    line-height: normal;
+    -webkit-text-shadow: 0.1em 0.1em 0.2em black;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    -webkit-text-stroke: 0.05em black;
+}
+
+.tncContainer {
+    display: none;
+}
+
+#tnc {
+    width: 50vw;
+    height: 50vh;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+#tncBody {
+    text-align: left;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-360deg);
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .preloader {
+        font-size: 5px;
+        padding-top: 50%;
+    }
+    .preloader-content {
+        width: 100%;
+        transform: scale(0.5);
+    }
+    .preloader--img, .preloader--text {
+        background-size: contain;
+    }
+}
+
+.header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.content {
+    margin-bottom: 40px;
+}
+
+/* landscape */
+
+@media screen and (max-height: 450px) and (min-width: 600px) {
+    .header, .footer, .content {
+        position: absolute;
+        width: 45%;
+        display: inline-block;
+        padding: 10px;
+    }
+    .header {
+        left: 5%;
+        top: 0px;
+        padding-top: 20px;
+    }
+    .footer {
+        left: 5%;
+        bottom: 20px;
+    }
+    .having_trouble {
+        text-align: center;
+    }
+    .sysPanel {
+        border-width: 30px;
+    }
+    .btn-accept {
+        margin-right: 10px;
+    }
+    #tnc {
+        width: 70vw;
+        height: 70vh;
+    }
+    .inputField {
+        margin-bottom: 6px;
+        font-size: 24px;
+        border-width: 12px;
+    }
+}
+
+#email-form, #store-form {
+    display: none;
+}
+
+/* iPhone 11 pro ViewPort is 812 */
+
+/* For mobile phones: */
+
+@media only screen and (max-device-width: 812px) {
+    .preloader-row {
+        right: 50%;
+        bottom: 0px;
+    }
+    .preloader-content {
+        position: relative;
+        right: -50%;
+    }
+    .sysPanel {
+        border-width: 30px;
+    }
+    .btn-accept {
+        margin-right: 0;
+    }
+    #tnc {
+        width: 70vw;
+        height: 60vh;
+    }
+    .header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .inputField {
+        margin-bottom: 6px;
+        font-size: 24px;
+    }
+    #remember_me_div {
+        margin-left: 0px;
+    }
+    .content {
+        margin-bottom: 10px;
+    }
+    body {
+        position: fixed;
+    }
+    .btn-new {
+        margin-top: 8px;
+    }
+    h2 {
+        font-size: 1em;
+    }
+    .errorMsg {
+        font-size: 80%;
+        border-width: 40px;
+        width: 80%;
+    }
+}
