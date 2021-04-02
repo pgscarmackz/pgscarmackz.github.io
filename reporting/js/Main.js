@@ -1,69 +1,8 @@
-const { Dropdown, DropdownButton, DropdownItemText, Button, overlay, OverlayTrigger, Popover } = window.ReactBootstrap;
-//const { DragDropContext, Draggable, Droppable } = window.ReactBeautifulDnd;
+// Main.js
 
-class SummaryGreeting extends React.Component {
-    render() {
-        return (
-            <span>{this.props.greetingMsg}</span>            
-            );
-    }
-}
-
-class SummaryRange extends React.Component {
-    render() {
-        return (
-            <span>Summary - Week {this.props.week}, {this.props.range}</span>
-            );
-    }
-}
-
-class SummaryReport extends React.Component {
-    render() {
-        const online = this.props.online ? "online" : "offline";
-        /*console.log("online = " + online);*/
-
-        return (
-            <div className="rp-table-div">
-                <div className="rp-img-div cs-default-color"><img id="icon-store-status" className="sum-icon-store-status-img" src={"./img/" + online + ".png"} alt="Img Status" /></div>
-                <div className="rp-store-name-div cs-default-color"><span className="rp-store-name">{this.props.name}</span> | {this.props.address}</div>
-                <div className="rp-online-div"><span className={"rp-" + online + "-text"}>{this.props.statusMsg}</span></div>
-                <div className="rp-table-m-div">
-                    <table>
-                        <tbody>
-                            <tr><th>Period</th><th className="sum-tbl-rest-column">Sales</th><th className="sum-tbl-rest-column">Redeem</th><th className="sum-tbl-rest-column">Net</th></tr>
-                            <tr><td className="sum-tbl-first-column">Current Day</td><td className="sum-tbl-cell">${this.props.summary.cds}.00</td><td className="sum-tbl-cell">${this.props.summary.cdr}.00</td><td className="sum-tbl-cell">${this.props.summary.cdn}.00</td></tr>
-                            <tr><td className="sum-tbl-first-column">Current Week</td><td className="sum-tbl-cell">${this.props.summary.cws}.00</td><td className="sum-tbl-cell">${this.props.summary.cwr}.00</td><td className="sum-tbl-cell">${this.props.summary.cwn}.00</td></tr>
-                            <tr><td className="sum-tbl-first-column">Last Week</td><td className="sum-tbl-cell">${this.props.summary.lws}.00</td><td className="sum-tbl-cell">${this.props.summary.lwr}.00</td><td className="sum-tbl-cell">${this.props.summary.lwn}.00</td></tr>
-                            <tr><td className="sum-tbl-first-column">This Month</td><td className="sum-tbl-cell">${this.props.summary.tms}.00</td><td className="sum-tbl-cell">${this.props.summary.tmr}.00</td><td className="sum-tbl-cell">${this.props.summary.tmn}.00</td></tr>
-                            <tr><td className="sum-tbl-first-column">Last Month</td><td className="sum-tbl-cell">${this.props.summary.lms}.00</td><td className="sum-tbl-cell">${this.props.summary.lmr}.00</td><td className="sum-tbl-cell">${this.props.summary.lmn}.00</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            );
-    }
-}
-
-class SummaryReports extends React.Component {
-    render() {
-        const reports = this.props.data.map(store => (
-            <SummaryReport
-                key={store.id}
-                name={store.name}
-                address={store.address}
-                online={store.online}
-                statusMsg={store.statusMsg}
-                summary={store.summary}
-            />
-        ));
-
-        return (
-            <div id="content-reports-m" className="rp-content-main">
-                {reports}
-            </div>
-            );
-    }
-}
+// Query menu type mit
+var mit = getQueryUrlVariable("mit");
+console.log("url.mit = " + mit);
 
 // Render SharedLayoutHeader
 var token = sessionStorage.getItem("token");
@@ -74,8 +13,8 @@ if (!token) {
     //window.location.href = "../";
 }
 
-firstName = firstName ? firstName : "FN";
-lastName = lastName ? lastName : "LN";
+firstName = firstName ? firstName : "Firstname";
+lastName = lastName ? lastName : "Lastname";
 
 var unload = function (e) {
     
@@ -94,6 +33,40 @@ ReactDOM.render(
     document.getElementById("sldm-content-sm")
 );
 
+if(mit === false) {
+    // Home
+    onRenderHomePage();
+}
+else if(mit === MenuItemType.revenue) {
+    
+}
+else if(mit === MenuItemType.billing) {
+
+}
+else if(mit === MenuItemType.v1) {
+
+}
+else if(mit === MenuItemType.v2) {
+
+}
+else if(mit === MenuItemType.pfh) {
+
+}
+else if(mit === MenuItemType.licensing) {
+
+}
+else if(mit === MenuItemType.account) {
+
+}
+else if(mit === MenuItemType.signout) {
+    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("firstName");
+    sessionStorage.removeItem("lastName");
+
+    window.location.href = "./index.html";
+}
+
+/*
 // Render reports
 ReactDOM.render(
     <SummaryGreeting greetingMsg="Good night, Smith" />,
@@ -145,3 +118,4 @@ ReactDOM.render(
     />,
     document.getElementById("sum-content-reports")
 );
+*/
