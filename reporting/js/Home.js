@@ -67,6 +67,23 @@ class SummaryReports extends React.Component {
     }
 }
 
+class SummaryMainContentSub extends React.Component {
+    render() {
+        return (
+            <div id="main-content-sub">
+                <div id="sum-content-greeting-sec">
+                </div>
+
+                <div id="sum-content-summary">
+                </div>
+
+                <div id="sum-content-reports">
+                </div>
+            </div>
+        );
+    }
+}
+
 const rpData = [
     {
         id: 1, name: "All Around Cafe", address: "5058 S Waverly Rd Suit B, Lansing, MI", online: true, statusMsg: "Online", summary: {
@@ -98,6 +115,7 @@ const rpData = [
 ];
 
 function onRenderHomePage() {
+    /*
     // Render SharedLayoutHeader
     ReactDOM.render(
         <SharedLayoutHeader ownerName={firstName + " " + lastName} />,
@@ -108,6 +126,13 @@ function onRenderHomePage() {
     ReactDOM.render(
         <SharedLayoutSideMenu itemFocused="1" />,
         document.getElementById("sldm-content-sm")
+    );
+    */
+
+    // Render main-content-sub
+    ReactDOM.render(
+        <SummaryMainContentSub />,
+        document.getElementById("main-content")
     );
 
     // Render reports
