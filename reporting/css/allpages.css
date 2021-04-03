@@ -168,7 +168,7 @@
 
 /* Summary page */
 #sum-content-greeting-sec {
-	margin-left: 50px;
+	margin-left: 0px;
 	margin-top: 50px;
 }
 
@@ -185,7 +185,7 @@
 #sum-content-summary span {
 	text-align: left;
 	margin-top: 50px;
-	margin-left: 50px;
+	margin-left: 0px;
 	/*margin-bottom: 20px;*/
 	background-color: rgb(250, 249, 248);
 	font-family: Arial;
@@ -195,7 +195,7 @@
 
 #sum-content-reports {
 	margin-top: 30px;
-	margin-left: 50px;
+	margin-left: 0px;
 	background-color: rgb(250, 249, 248);
 	font-family: Arial;
 	font-size: 18px;
@@ -242,6 +242,11 @@
 	transition-property: left;
 }
 
+#main-content-sub {
+	margin-left: 50px;
+	margin-top: 50px;	
+}
+
 .main-text-size {
 	font-family: Arial;
 	font-size: 28px;
@@ -252,4 +257,9 @@
 	font-family: Arial;
 	font-size: 20px;
 	font-weight: bold;
+}
+
+/* Account page */
+.account-btn-update {
+	width: 40%;
 }
