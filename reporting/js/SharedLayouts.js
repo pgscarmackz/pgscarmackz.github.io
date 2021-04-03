@@ -28,27 +28,27 @@ class SharedLayoutSideMenu extends React.Component {
                     <nav className="sm-nav">
                         <ul>
                             <li>
-                                <a href="./main.html" className="sidemenu-ul-li-a"><i className="fas fa-home fa-lg sm-sm-i-5px"></i><div className="sidemenu-item-text">Home</div></a>
+                                <a href="./main.html?mi=home" className="sidemenu-ul-li-a"><i className="fas fa-home fa-lg sm-sm-i-5px"></i><div className="sidemenu-item-text">Home</div></a>
                             </li>
                             <li className="dropdown">
                                 <a className="sidemenu-ul-li-a"><i className="fas fa-table fa-lg sm-sm-i-6px"></i><div className="sidemenu-item-text">Reports<span>&rsaquo;</span></div></a>
                                 <ul>
-                                    <li><a href="./main.html?mit=revenue" className="sidemenu-ul-li-a"><i className="fas fa-table fa-lg sm-sm-i-6px"></i><div className="sidemenu-item-text">Revenue Report</div></a></li>
-                                    <li><a href="./main.html?mit=billing" className="sidemenu-ul-li-a"><i className="fas fa-table fa-lg sm-sm-i-6px"></i><div className="sidemenu-item-text">Billing Report</div></a></li>
+                                    <li><a href="./main.html?mi=revenue" className="sidemenu-ul-li-a"><i className="fas fa-table fa-lg sm-sm-i-6px"></i><div className="sidemenu-item-text">Revenue Report</div></a></li>
+                                    <li><a href="./main.html?mi=billing" className="sidemenu-ul-li-a"><i className="fas fa-table fa-lg sm-sm-i-6px"></i><div className="sidemenu-item-text">Billing Report</div></a></li>
                                 </ul>
                             </li>
                             <li className="dropdown">
                                 <a className="sidemenu-ul-li-a"><i className="fas fa-eye fa-lg sm-sm-i-5px"></i><div className="sidemenu-item-text">Live View<span>&rsaquo;</span></div></a>
                                 <ul>
-                                    <li><a href="./main.html?mit=v1" className="sidemenu-ul-li-a"><i className="fas fa-eye fa-lg sm-sm-i-5px"></i><div className="sidemenu-item-text">Vendor 1</div></a></li>
-                                    <li><a href="./main.html?mit=v2" className="sidemenu-ul-li-a"><i className="fas fa-eye fa-lg sm-sm-i-5px"></i><div className="sidemenu-item-text">Vendor 2</div></a></li>
-                                    <li><a href="./main.html?mit=pfh" className="sidemenu-ul-li-a"><i className="fas fa-eye fa-lg sm-sm-i-5px"></i><div className="sidemenu-item-text">Play From Home</div></a></li>
+                                    <li><a href="./main.html?mi=v1" className="sidemenu-ul-li-a"><i className="fas fa-eye fa-lg sm-sm-i-5px"></i><div className="sidemenu-item-text">Vendor 1</div></a></li>
+                                    <li><a href="./main.html?mi=v2" className="sidemenu-ul-li-a"><i className="fas fa-eye fa-lg sm-sm-i-5px"></i><div className="sidemenu-item-text">Vendor 2</div></a></li>
+                                    <li><a href="./main.html?mi=pfh" className="sidemenu-ul-li-a"><i className="fas fa-eye fa-lg sm-sm-i-5px"></i><div className="sidemenu-item-text">Play From Home</div></a></li>
                                 </ul>
                             </li>
-                            <li><a href="./main.html?mit=licensing" className="sidemenu-ul-li-a"><i className="fas fa-lock fa-lg sm-sm-i-9px"></i><div className="sidemenu-item-text">Licensing</div></a></li>
+                            <li><a href="./main.html?mi=licensing" className="sidemenu-ul-li-a"><i className="fas fa-lock fa-lg sm-sm-i-9px"></i><div className="sidemenu-item-text">Licensing</div></a></li>
                             <li><a className="sidemenu-ul-li-a-sep"><img src="./img/grey.png" alt="Grey" className="sidemenu-icon-seperator" /></a></li>
-                            <li><a href="./main.html?mit=account" className="sidemenu-ul-li-a"><i className="fas fa-user fa-lg demo-sm-i-9px"></i><div className="sidemenu-item-text">Account</div></a></li>
-                            <li><a href="./main.html?mit=signout" className="sidemenu-ul-li-a"><i className="fas fa-sign-out-alt fa-lg demo-sm-i-9px"></i><div className="sidemenu-item-text">Sign Out</div></a></li>
+                            <li><a href="./main.html?mi=account" className="sidemenu-ul-li-a"><i className="fas fa-user fa-lg demo-sm-i-9px"></i><div className="sidemenu-item-text">Account</div></a></li>
+                            <li><a href="./main.html?mi=signout" className="sidemenu-ul-li-a"><i className="fas fa-sign-out-alt fa-lg demo-sm-i-9px"></i><div className="sidemenu-item-text">Sign Out</div></a></li>
                         </ul>
                     </nav>
                 </div>

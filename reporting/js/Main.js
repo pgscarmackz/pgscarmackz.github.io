@@ -1,8 +1,8 @@
 // Main.js
 
 // Query menu type mit
-var mit = getQueryUrlVariable("mit");
-console.log("url.mit = " + mit);
+var mi = getQueryUrlVariable("mi");
+console.log("url.mi = " + mi);
 
 // Render SharedLayoutHeader
 var token = sessionStorage.getItem("token");
@@ -33,32 +33,32 @@ ReactDOM.render(
     document.getElementById("sldm-content-sm")
 );
 
-if(mit === false) {
+if(mi === false || mi === MenuItemType.home) {
     // Home
     onRenderHomePage();
 }
-else if(mit === MenuItemType.revenue) {
+else if(mi === MenuItemType.revenue) {
     
 }
-else if(mit === MenuItemType.billing) {
+else if(mi === MenuItemType.billing) {
 
 }
-else if(mit === MenuItemType.v1) {
+else if(mi === MenuItemType.v1) {
 
 }
-else if(mit === MenuItemType.v2) {
+else if(mi === MenuItemType.v2) {
 
 }
-else if(mit === MenuItemType.pfh) {
+else if(mi === MenuItemType.pfh) {
 
 }
-else if(mit === MenuItemType.licensing) {
+else if(mi === MenuItemType.licensing) {
 
 }
-else if(mit === MenuItemType.account) {
+else if(mi === MenuItemType.account) {
 
 }
-else if(mit === MenuItemType.signout) {
+else if(mi === MenuItemType.signout) {
     sessionStorage.removeItem("token");
     sessionStorage.removeItem("firstName");
     sessionStorage.removeItem("lastName");

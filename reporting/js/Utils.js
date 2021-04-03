@@ -1,5 +1,6 @@
 
 var MenuItemType = {
+    home: "home",
     revenue: "revenue",
     billing: "billing",
     v1: "v1",
