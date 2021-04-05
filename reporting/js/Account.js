@@ -7,38 +7,50 @@ class AccountMainContentSub extends React.Component {
                 <p className="main-text-size">Account</p>
                 <div className="row">
                     <div className="col-sm main-text-size-2">Name:</div>
-                    <div className="col-sm">Rober Harrington</div>
+                    <div className="col-sm"><p className="acct-field-text">Robert Harrington</p></div>
                     <div className="col-sm"></div>
                     <div className="col-sm"></div>
                 </div>
                 <div className="row">
                     <div className="col-sm main-text-size-2">Email:</div>
-                    <div className="col-sm">r.harrington@host.com</div>
+                    <div className="col-sm"><p className="acct-field-text">r.harrington@host.com</p></div>
                     <div className="col-sm"></div>
                     <div className="col-sm"></div>
                 </div>
-                <div className="row">
-                    <div className="col-sm main-text-size-2">Current Password:</div>
-                    <div className="col-sm">***********</div>
-                    <div className="col-sm"></div>
+                <div className="row acct-row-spacer">
                     <div className="col-sm"></div>
                 </div>
-                <div className="row">
-                    <div className="col-sm main-text-size-2">New Password:</div>
-                    <div className="col-sm">***********</div>
-                    <div className="col-sm"></div>
-                    <div className="col-sm"></div>
+
+                <div>
+                    <form>
+                        <div className="row acct-row-input-size">
+                            <div className="col-sm main-text-size-2">Current Password:</div>
+                            <div className="col-sm"><input type="password" className="form-control" id="currentPassword" placeholder=""/></div>
+                            <div className="col-sm"></div>
+                            <div className="col-sm"></div>
+                        </div>
+                        <div className="row acct-row-input-size">
+                            <div className="col-sm main-text-size-2">New Password:</div>
+                            <div className="col-sm"><input type="password" className="form-control" id="newPassword" placeholder=""/></div>
+                            <div className="col-sm"></div>
+                            <div className="col-sm"></div>
+                        </div>
+                        <div className="row acct-row-input-size">
+                            <div className="col-sm main-text-size-2">Repeat New Password:</div>
+                            <div className="col-sm"><input type="password" className="form-control" id="repeatPassword" placeholder=""/></div>
+                            <div className="col-sm"></div>
+                            <div className="col-sm"></div>
+                        </div>
+                        <div className="row">
+                            <div className="col-sm"></div>
+                            <div className="col-sm"><button type="button" className="btn btn-primary acct-btn-update">Update</button></div>
+                            <div className="col-sm"></div>
+                            <div className="col-sm"></div>
+                        </div>
+                    </form>
                 </div>
-                <div className="row">
-                    <div className="col-sm main-text-size-2">Repeat New Password:</div>
-                    <div className="col-sm">***********</div>
-                    <div className="col-sm"></div>
-                    <div className="col-sm"></div>
-                </div>
-                <div className="row">
-                    <div className="col-sm"></div>
-                    <div className="col-sm"><button type="button" className="btn btn-primary" >Update</button></div>
-                    <div className="col-sm"></div>
+            
+                <div className="row acct-row-spacer">
                     <div className="col-sm"></div>
                 </div>
                 <div className="row">
@@ -48,7 +60,7 @@ class AccountMainContentSub extends React.Component {
                     <div className="col-sm"></div>
                 </div>
 
-                <table className="table table-striped table-bordered account-btn-update">
+                <table className="table table-striped table-bordered acct-location-tbl">
                     <thead>
                     <tr>
                         <th>ID</th>

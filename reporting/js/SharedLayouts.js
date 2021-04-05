@@ -21,6 +21,10 @@ class SharedLayoutHeader extends React.Component {
 }
 
 class SharedLayoutSideMenu extends React.Component {
+    onClickSignOut() {
+        onRenderSignOutPage();        
+    }
+
     render() {
         return (
             <div id="content-sm-sec" className="sm-content-sm-sec">
