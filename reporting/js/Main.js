@@ -46,7 +46,7 @@ else if(mi === MenuItemType.billing) {
 
 }
 else if(mi === MenuItemType.v1) {
-
+    onRenderListViewAccountPage();
 }
 else if(mi === MenuItemType.v2) {
 

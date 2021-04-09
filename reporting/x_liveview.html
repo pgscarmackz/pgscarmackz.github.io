@@ -11,6 +11,7 @@
         <link rel="stylesheet" type="text/css" href="./css/comstyle.css" />
         <link rel="stylesheet" type="text/css" href="./css/sidemenu.css" />
         <link rel="stylesheet" type="text/css" href="./css/report.css" />
+        <link rel="stylesheet" type="text/css" href="./css/summary.css" />
         <link rel="stylesheet" type="text/css" href="./css/allpages.css" />    
     </head>
 
@@ -26,7 +27,50 @@
         </div>
 
         <!--Main content-->
-        <div id="main-content">            
+        <div id="main-content">
+            <div id="main-content-sub">
+                <p class="main-text-size">Live View</p>
+                <div class="row">
+                    <div class="col-sm main-text-size-2">Location:</div>
+                    <form>
+                        <div class="form-group">
+                          <select class="form-control" id="sel1" style="width: 350px;">
+                            <option>10284 All Around Cafe</option>
+                            <option>10285 Boost Mobile</option>
+                            <option>10286 Gold Lounge</option>
+                          </select>
+                        </div>
+                      </form>
+                    <div class="col-sm"></div>
+                    <div class="col-sm"></div>                    
+                </div>
+                <div class="row acct-row-spacer">
+                    <div class="col-sm"></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm main-text-size-2">Active Locations:</div>
+                    <div class="col-sm"></div>
+                    <div class="col-sm"></div>
+                    <div class="col-sm"></div>
+                </div>
+
+                <table class="table table-striped table-bordered acct-location-tbl">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>                    
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>Tiger Nixon</td><td>System Architect</td></tr>
+                    <tr><td>Garrett Winters</td><td>Accountant</td></tr>
+                    <tr><td>Ashton Cox</td><td>Junior Technical Author</td></tr>
+                    <tr><td>Cedric Kelly</td><td>Senior Javascript Developer</td></tr>
+                    <tr><td>Airi Satou</td><td>Accountant</td></tr>
+                    <tr><td>Brielle Williamson</td><td>Integration Specialist</td></tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
@@ -45,10 +89,6 @@
         <script type="text/javascript" src="./js/Utils.js"></script>
 
         <script type="text/babel" src="./js/SharedLayouts.js"></script>
-        <script type="text/babel" src="./js/Home.js"></script>
-        <script type="text/babel" src="./js/LiveView.js"></script>
-        <script type="text/babel" src="./js/Account.js"></script>
-        <script type="text/babel" src="./js/SignOut.js"></script>
-        <script type="text/babel" src="./js/Main.js"></script>        
+        <script type="text/babel" src="./js/RevenueReport.js"></script>
     </body>
 </html>
